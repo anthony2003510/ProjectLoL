@@ -1,17 +1,17 @@
 import './App.css'
 import Sidebar from './components/Sidebar'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import Champions from '../pages/Champions'
-import Items from '../pages/Items'
-import YourProfile from '../pages/Yourprofile'
-import Home from '../pages/Home'
+import Champions from '../src/pages/Champions'
+import Items from '../src/pages/Items'
+import YourProfile from '../src/pages/Yourprofile'
+import Home from '../src/pages/Home'
 // ROLES
-import Assassin from '../pages/roles/Assassin'
-import Fighter from '../pages/roles/Fighter'
-import Mage from '../pages/roles/Mage'
-import Marksman from '../pages/roles/Marksman'
-import Tank from '../pages/roles/Tank'
-import Support from '../pages/roles/Support'
+import Assassin from '../src/pages/roles/Assassin'
+import Fighter from '../src/pages/roles/Fighter'
+import Mage from '../src/pages/roles/Mage'
+import Marksman from '../src/pages/roles/Marksman'
+import Tank from '../src/pages/roles/Tank'
+import Support from '../src/pages/roles/Support'
 
 function App() {
   return (

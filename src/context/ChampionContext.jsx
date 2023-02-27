@@ -8,7 +8,7 @@ export function ChampionContextProvider({children}) {
     const [data, setdata] = useState()
 
     useEffect(()=>{
-        fetch('http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/champion.json').then((Response) => Response.json()).then((result) => setdata(result))
+        fetch(url).then((Response) => Response.json()).then((result) => setdata(result))
     },[])
 
     // fetch('http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/champion.json').then((Response) => Response.json()).then((result) => setdata(result))
