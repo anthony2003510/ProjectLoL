@@ -4,7 +4,7 @@ import {ChampionContext} from '../context/ChampionContext'
 
 function Items() {
   const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.4.1/img/item/'
-  const {champions, items} = useContext(ChampionContext)
+  const {champions, items, pjname, changepjname} = useContext(ChampionContext)
   const itemsValues = Object.values(items.data)
 
   // console.log(typeof itemsValues)

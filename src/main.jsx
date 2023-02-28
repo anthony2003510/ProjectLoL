@@ -5,9 +5,9 @@ import './index.css'
 import {ChampionContextProvider} from '../src/context/ChampionContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <ChampionContextProvider>
       <App />
     </ChampionContextProvider>
-  // </React.StrictMode>,
+  </React.StrictMode>,
 )

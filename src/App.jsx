@@ -13,7 +13,11 @@ import Marksman from '../src/pages/roles/Marksman'
 import Tank from '../src/pages/roles/Tank'
 import Support from '../src/pages/roles/Support'
 
+import {ChampionContext} from './context/ChampionContext'
+import { useContext } from 'react'
+import SpecificChampion from './pages/SpecificChampion'
 function App() {
+  const {champions,items,championName,setchampionName} = useContext(ChampionContext)
   return (
     <div className='flex'>
       <Router>
@@ -30,7 +34,8 @@ function App() {
           <Route path='/champions/Mage' exact element={<Mage />}/>
           <Route path='/champions/Assassin' exact element={<Assassin/>}/>
           <Route path='/champions/Marksman' exact element={<Marksman/>}/>
-          <Route path='/champions/Support' exact element={<Support/>}/>
+          <Route path='/champions/Support' exact element={<Support />}/>
+          <Route path='/champions/SpecificChampion' exact element={<SpecificChampion name ={championName} />}/>
 
 
         </Routes>
