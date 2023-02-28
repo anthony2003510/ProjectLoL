@@ -4,29 +4,24 @@ import {createContext, useState, useEffect} from 'react'
 export const ChampionContext = createContext()
 
 export function ChampionContextProvider({children}) {
-    const url = 'http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/champion.json'
-    const [data, setdata] = useState()
+    const urlchampions = 'http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/champion.json'
+    const [champions, setchampions] = useState()
+
+    const urlitems = 'http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/item.json'
+    const [items, setitems] = useState()
+
 
     useEffect(()=>{
-        fetch(url).then((Response) => Response.json()).then((result) => setdata(result))
+        fetch(urlchampions).then((Response) => Response.json()).then((result) => setchampions(result))
     },[])
 
-    // fetch('http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/champion.json').then((Response) => Response.json()).then((result) => setdata(result))
-    // me hace como un bucle infinito y no se por que
+    useEffect(()=>{
+        fetch(urlitems).then((Response) => Response.json()).then((result) => setitems(result))
+    },[])
 
-    // async function getData()
-    // {
-    //     try {
-    //         const response = await fetch(url)
-    //         setdata(await response.json())
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
-    // getData()
-    // me hace como un bucle infinito y no se por que
+   
   return (
-        <ChampionContext.Provider value={data}>
+        <ChampionContext.Provider value={{champions,items}}>
             {children}
         </ChampionContext.Provider>
   )
