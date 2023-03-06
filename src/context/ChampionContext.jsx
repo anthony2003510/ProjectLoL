@@ -6,9 +6,12 @@ export const ChampionContext = createContext()
 export function ChampionContextProvider({children}) {
     const urlchampions = 'http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/champion.json'
     const [champions, setchampions] = useState()
-    const [championName, setchampionName] = useState("")
+    
+    const [ChampionName, setChampionName] = useState("")
+
     const urlitems = 'http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/item.json'
     const [items, setitems] = useState()
+
 
 
     useEffect(()=>{
@@ -17,7 +20,7 @@ export function ChampionContextProvider({children}) {
     },[])
  
   return (
-        <ChampionContext.Provider value={{champions,items,championName,setchampionName}}>
+        <ChampionContext.Provider value={{champions,items,ChampionName,setChampionName}}>
             {children}
         </ChampionContext.Provider>
   )

@@ -17,7 +17,7 @@ import {ChampionContext} from './context/ChampionContext'
 import { useContext } from 'react'
 import SpecificChampion from './pages/SpecificChampion'
 function App() {
-  const {champions,items,championName,setchampionName} = useContext(ChampionContext)
+  const {champions,items,ChampionName,setChampionName} = useContext(ChampionContext)
   return (
     <div className='flex'>
       <Router>
@@ -35,7 +35,7 @@ function App() {
           <Route path='/champions/Assassin' exact element={<Assassin/>}/>
           <Route path='/champions/Marksman' exact element={<Marksman/>}/>
           <Route path='/champions/Support' exact element={<Support />}/>
-          <Route path='/champions/SpecificChampion' exact element={<SpecificChampion name ={championName} />}/>
+          <Route path='/champions/SpecificChampion' exact element={<SpecificChampion />}/>
 
 
         </Routes>
