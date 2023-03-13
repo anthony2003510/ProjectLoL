@@ -10,6 +10,9 @@ module.exports = {
         "dark-blue": "#091428",
         "light-blue": "#CDFAFA",
       },
+      fontFamily: {
+        'LoL': ['BeaufortforLOL'],
+      },
     },
   },
   plugins: [],

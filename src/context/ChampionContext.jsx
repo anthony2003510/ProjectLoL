@@ -1,6 +1,6 @@
 import {createContext, useState, useEffect} from 'react'
 //import { json } from 'react-router-dom'
-
+import axios from 'axios';
 export const ChampionContext = createContext()
 
 export function ChampionContextProvider({children}) {
@@ -15,8 +15,8 @@ export function ChampionContextProvider({children}) {
 
 
     useEffect(()=>{
-        fetch(urlitems).then((Response) => Response.json()).then((result) => setitems(result))
-        fetch(urlchampions).then((Response) => Response.json()).then((result) => setchampions(result))
+        axios.get(urlitems).then((result) => setitems(result.data))
+        axios.get(urlchampions).then((result) => setchampions(result.data))
     },[])
  
   return (
