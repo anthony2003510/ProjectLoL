@@ -3,6 +3,7 @@ import {ChampionContext} from '../context/ChampionContext'
 import { GrFormPreviousLink , GrFormNextLink} from "react-icons/gr";
 import { RxDotFilled } from "react-icons/rx";
 import axios from 'axios';
+import "../App.css";
 
 function SpecificChampion() {
   //variables para cambiar de estados
@@ -69,24 +70,30 @@ function SpecificChampion() {
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover'
     }}>
-<div className='bg-[#091428]'>
+    <div className='bg-[#091428]' style={{padding:"1em 0 0 0", backgroundColor: "rgb(9 20 40 / 0.9)"}}>
 
         <div className="py-4">
-          <h2 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white italic text-center font-outline-2">{dataChamp.title}</h2>
-          <h1 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center font-outline-2"
-          >{dataChamp.name}</h1>
+          <h1 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
+            {dataChamp.name}
+          </h1>
+          <h5 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white text-center"
+          style={{fontSize: "36px"}}>
+            {dataChamp.title}
+          </h5>
         </div>
+
+        <hr  style={{border: "solid 1px white"}}/>
 
         {/* LORE CHAMP */}
         <div className="p-6  rounded-lg content-center">
             <p className=" mb-2 text-2xl font-bold tracking-tight text-[#f2f2f2] dark:text-[#f2f2f2] text-center">
               Historia de {ChampionName}
             </p>
-            <p className="font-normal text-[#f2f2f2] dark:text-[#f2f2f2]">{dataChamp.lore}</p>   
+            <p style={{padding: "0 5em 0 5em", textAlign: "center"}} className="font-normal text-[#f2f2f2] dark:text-[#f2f2f2]">{dataChamp.lore}</p>   
         </div>
         {/* ////////// */}
 
-        <div className='grid grid-cols-2 space-x-3'>
+        <div className='' style={{display: "grid", gridTemplateColumns: "repeat(2,1fr)", padding:"0 3em 0 3em", gap: "1em"}}>
           {/*// SKILLS //*/}
           <div className='grid grid-rows-2 py-16'>   
             
@@ -97,11 +104,11 @@ function SpecificChampion() {
               <p className="mb-3 font-normal text-[#f2f2f2] dark:text-[#f2f2f2]">{SpellDesc == ""? Habilidades[1] : SpellDesc}</p>   
             </div>
 
-            <div className='flex flex-row pt-2.5 pl-32'>
+            <div className='flex flex-row' style={{justifyContent:"space-between"}}>
               {
                 dataChamp.spells?.map((spell,i)=>(
                   <div key={i}  className='p-1.5 '>
-                    <img src={`http://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/${spell.image.full}`} className ='rounded-xl cursor-pointer hover:w-20 duration-100' 
+                    <img  src={`http://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/${spell.image.full}`} className ='rounded-xl cursor-pointer skills' 
                     onClick={() => setSpellAttributes(spell.name, spell.description)}/>
                   </div>
                 ))

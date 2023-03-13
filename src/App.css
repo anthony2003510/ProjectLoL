@@ -1,3 +1,11 @@
 .test{
     background-color: aqua;
 }
+
+.skills {
+    transition: 0.25s;
+}
+
+.skills:hover {
+    transform: scale(1.2);
+}
