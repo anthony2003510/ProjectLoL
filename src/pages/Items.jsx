@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Link, Route, Routes, useNavigate} from 'react-r
 import {ChampionContext} from '../context/ChampionContext'
 
 function Items() {
-  const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.4.1/img/item/'
+  const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.5.1/img/item/'
   const {champions, items, pjname, changepjname} = useContext(ChampionContext)
   const itemsValues = Object.values(items.data)
 

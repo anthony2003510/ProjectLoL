@@ -18,7 +18,7 @@ function SpecificChampion() {
 
   async function getChamp()
   {
-    const champ = await axios.get(`http://ddragon.leagueoflegends.com/cdn/13.4.1/data/es_ES/champion/${ChampionName}.json`)
+    const champ = await axios.get(`http://ddragon.leagueoflegends.com/cdn/13.5.1/data/es_ES/champion/${ChampionName}.json`)
     return champ.data.data[ChampionName]
   }
 
@@ -76,10 +76,10 @@ function SpecificChampion() {
           <h1 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
             {dataChamp.name}
           </h1>
-          <h5 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white text-center"
+          <p className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white text-center"
           style={{fontSize: "36px"}}>
             {dataChamp.title}
-          </h5>
+          </p>
         </div>
 
         <hr  style={{border: "solid 1px white"}}/>

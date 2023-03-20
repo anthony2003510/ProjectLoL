@@ -1,20 +1,23 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 function Yourprofile() {
-  const API_KEY = 'RGAPI-d9b07d90-fd1d-4e2c-a147-9759d43249ed'
+  const API_KEY = 'RGAPI-c9299a19-a29e-4d44-8822-a5480b91e06f'
   const [playerSearch, setplayerSearch] = useState("")
+  const [summonerData, setsummonerData] = useState({})
+
 
   function searchForPlayer(event)
   {
     event.preventDefault()
 
     var APICallString = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${playerSearch}?api_key=${API_KEY}`
-
-    // console.log(APICallString)
-    const summonerData = axios.get(APICallString).then(function (response)
+    
+    // var APICallString = `https://newsapi.org/v2/top-headlines/sources?category=technology&language=es&country=mx&apiKey=9c5e5bb69a724318b37911cd10c55df2`
+    axios.get(APICallString).then(function (response)
     {
-      console.log(response.data)
-      return response.data
+      //console.log(response.data) //esto era response.data, recuerda anto
+      setsummonerData(response.data)
+      console.log(summonerData)
     }).catch(function (error)
     {
       console.log(error)
@@ -47,6 +50,19 @@ function Yourprofile() {
           </div>
       </form>
 
+      {
+        JSON.stringify(summonerData) != '{}' ? 
+        <>
+          <h2>{summonerData.name}</h2>
+          <img src={`http://ddragon.leagueoflegends.com/cdn/13.5.1/img/profileicon/${summonerData.profileIconId
+}.png`} alt="" />
+          <p>Summoner level: {summonerData.summonerLevel}</p>
+        </> 
+        :
+        <>
+          <div> we dont have player data</div>
+        </>
+      }
 
     </div>
   </>

@@ -9,3 +9,12 @@
 .skills:hover {
     transform: scale(1.2);
 }
+
+
+.champs {
+    transition: 0.25s;
+}
+
+.champs:hover {
+    transform: scale(1.06);
+}
