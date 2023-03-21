@@ -17,6 +17,8 @@ import Support from '../src/pages/roles/Support'
 import Damage from '../src/pages/roles/Damage'
 import Othersitems from '../src/pages/roles/Othersitems'
 import Resistance from '../src/pages/roles/Resistance'
+import Jungleitems from '../src/pages/roles/Jungleitems'
+
 
 
 import {ChampionContext} from './context/ChampionContext'
@@ -47,6 +49,7 @@ function App() {
           <Route path='/items/damage' exact element={<Damage/>}/>
           <Route path='/items/resistance' exact element={<Resistance />}/>
           <Route path='/items/others' exact element={<Othersitems />}/>
+          <Route path='/items/jungle' exact element={<Jungleitems />}/>
 
         </Routes>
       </Router>
