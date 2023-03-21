@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { TfiClose } from "react-icons/tfi";
-function Modal({children, VisibilidadModal,setVisibilidadModal}) {
+function Modal({children, VisibilidadModal,setVisibilidadModal,title}) {
   return (
     <>
         {VisibilidadModal && 
@@ -9,7 +9,7 @@ function Modal({children, VisibilidadModal,setVisibilidadModal}) {
             <ContenedorModal className='text-[#f2f2f2]'>
 
                 <Encabezado>
-                    <h2 className='text-[#f2f2f2]'>Rol de los campeones</h2>
+                    <h2 className='text-[#f2f2f2]'>{title}</h2>
                 </Encabezado>
                 <CerrarModal onClick={() => setVisibilidadModal(false)}><TfiClose size={20}/></CerrarModal>
                 {children}

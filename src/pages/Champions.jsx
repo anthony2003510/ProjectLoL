@@ -54,7 +54,7 @@ function Champions() {
          key={i} className="flex flex-row items-center bg-transparent gap-1 champs rounded-lg md:flex-row md:max-w-xl">
           <img className="object-cover w-24 rounded-t-lg h-24 md:h-auto md:w-24 md:rounded-none md:rounded-l-lg" src={`${imagen}${pj.image.full}`} alt=""/>
           <div className="flex flex-col justify-between p-2 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style={{fontSize:"22px"}}>{pj.name}</h5>
+              <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style={{fontSize:"22px"}}>{pj.name}</p>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{fontSize:"18px"}}>{pj.title}</p>
           </div>
           </Link>
@@ -66,6 +66,7 @@ function Champions() {
     <Modal
       VisibilidadModal={VisibilidadModal}
       setVisibilidadModal={setVisibilidadModal}
+      title="Rol de los campeones"
     >
       <div className='mt-4 flex flex-col gap-4 relative'>
         {

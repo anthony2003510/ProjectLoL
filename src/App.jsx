@@ -13,6 +13,12 @@ import Marksman from '../src/pages/roles/Marksman'
 import Tank from '../src/pages/roles/Tank'
 import Support from '../src/pages/roles/Support'
 
+//ITEMS STATS
+import Damage from '../src/pages/roles/Damage'
+import Othersitems from '../src/pages/roles/Othersitems'
+import Resistance from '../src/pages/roles/Resistance'
+
+
 import {ChampionContext} from './context/ChampionContext'
 import { useContext } from 'react'
 import SpecificChampion from './pages/SpecificChampion'
@@ -37,6 +43,10 @@ function App() {
           <Route path='/champions/Support' exact element={<Support />}/>
           <Route path='/champions/SpecificChampion' exact element={<SpecificChampion />}/>
 
+          {/* RUTAS PARA LOS OBJETOS */}
+          <Route path='/items/damage' exact element={<Damage/>}/>
+          <Route path='/items/resistance' exact element={<Resistance />}/>
+          <Route path='/items/others' exact element={<Othersitems />}/>
 
         </Routes>
       </Router>
