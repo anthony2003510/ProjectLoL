@@ -11,22 +11,22 @@ function Sidebar() {
 
     const mypages = [
         {
-            name: "Home",
+            name: "Inicio",
             link: "/home",
             icon:  AiFillHome
         },
         {
-           name: "Champions",
+           name: "Campeones",
            link: "/champions",
            icon:  HiLightningBolt
         },
         {
-            name: "Items",
+            name: "Objetos",
             link: "/items",
             icon:  HiBeaker
         },
         {
-            name: "Your Profile",
+            name: "Buscar Invocador",
             link: "/yourprofile",
             icon:  HiUsers
         }

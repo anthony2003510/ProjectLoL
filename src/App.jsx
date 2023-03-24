@@ -1,6 +1,6 @@
 import './App.css'
 import Sidebar from './components/Sidebar'
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes,Navigate} from 'react-router-dom'
 import Champions from '../src/pages/Champions'
 import Items from '../src/pages/Items'
 import YourProfile from '../src/pages/Yourprofile'
@@ -31,6 +31,11 @@ function App() {
       <Router>
         <Sidebar />
         <Routes>
+        <Route path="/" element={<Navigate to="/home" replace={true} />}/>
+        <Route
+          path="*"
+          element={<Navigate to="/" replace={true} />}
+        />
           <Route path='/home' exact element={<Home />}/>
           <Route path='/champions' exact element={<Champions />}/>
           <Route path='/items' exact element={<Items />}/>
