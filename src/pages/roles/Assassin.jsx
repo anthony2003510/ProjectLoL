@@ -1,10 +1,30 @@
 import React,{useState,useContext} from 'react'
 import {BrowserRouter as Router, Link, Route, Routes, useNavigate} from 'react-router-dom';
 import {ChampionContext} from '../../context/ChampionContext'
+
+import {
+  GiBloodySword,
+  GiAxeSword,
+  GiBorderedShield,
+  GiPocketBow,
+  GiSecretBook,
+  GiLifeSupport,
+} from "react-icons/gi";
+import Modal from "../../components/Modal";
 function Assassin() {
   const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/'
   const {champions, items, ChampionName,setChampionName} = useContext(ChampionContext)
   const championsPjs = Object.values(champions.data)
+
+  const [VisibilidadModal, setVisibilidadModal] = useState(false);
+  const roles = [
+    { rol: "Luchadores", route: "/champions/Fighter", icon: GiAxeSword },
+    { rol: "Tanques", route: "/champions/Tank", icon: GiBorderedShield },
+    { rol: "Magos", route: "/champions/Mage", icon: GiSecretBook },
+    { rol: "Asesinos", route: "/champions/Assassin", icon: GiBloodySword },
+    { rol: "Tiradores", route: "/champions/Marksman", icon: GiPocketBow },
+    { rol: "Apoyos", route: "/champions/Support", icon: GiLifeSupport },
+  ];
 
 
   function setFetch(pjname)
@@ -28,9 +48,15 @@ function Assassin() {
   }
   return (
     <>
-     <div className='p-7 text-2xl scrollbar-none font-semibold h-screen w-screen' style={{backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${ChampionName}_0.jpg)`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',overflowY: "scroll"}}>
+     <div
+        className="p-7 overflow-scroll scrollbar-none text-2xl font-semibold w-screen h-screen"
+        style={{
+          backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Milio_0.jpg)`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          overflowY: "scroll",
+        }}
+      >
       <div
           className="w-full rounded-lg"
           style={{
@@ -40,9 +66,15 @@ function Assassin() {
             backgroundColor: "rgb(9 20 40 / 0.9)",
           }}
         >
-          <div style={{fontSize: "2.8vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
-          Asesinos
-          </div>
+          <div className="grid grid-cols-3">
+
+<button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Mostrar Roles</button>
+
+<div style={{fontSize: "2.8vw"}} className="mr-auto ml-auto mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
+Asesinos
+</div>
+
+</div>
           <hr style={{ border: "solid 1px white" }} />
 
           <div
@@ -88,7 +120,27 @@ function Assassin() {
       }
       </div>
       </div>
-      </div> 
+      <Modal
+          VisibilidadModal={VisibilidadModal}
+          setVisibilidadModal={setVisibilidadModal}
+          title="Rol de los campeones"
+        >
+          <div className="mt-4 flex flex-col gap-4 relative">
+            {roles?.map((rol, i) => (
+              <Link
+                to={rol?.route}
+                key={i}
+                className="group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md"
+              >
+                <div>{React.createElement(rol?.icon, { size: 20 })}</div>
+
+                <h2 className="whitespace-pre duration-500">{rol?.rol}</h2>
+              </Link>
+            ))}
+          </div>
+        </Modal>
+      </div>
+      
     </>
   )
 }

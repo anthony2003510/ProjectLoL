@@ -8,7 +8,7 @@ function Items() {
   const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.6.1/img/item/'
   const {champions, items, pjname, changepjname} = useContext(ChampionContext)
   const itemsValues = Object.values(items.data)
-  const [VisibilidadModal, setVisibilidadModal] = useState(true)
+  const [VisibilidadModal, setVisibilidadModal] = useState(false)
 
   const stats = [
     {stat: 'Daño', route:'/items/damage',icon: GiBloodySword}, 
@@ -29,9 +29,16 @@ function Items() {
     
       
     <div className='rounded-lg' style={{padding:"1em 1em 1em 1em", backgroundColor: "rgb(9 20 40 / 0.9)"}}>
-    <div style={{fontSize: "2.8vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
-    Objetos
-  </div>
+
+    <div className="grid grid-cols-3">
+
+          <button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Mostrar Tipos</button>
+    
+          <div style={{fontSize: "2.8vw"}} className="mr-auto ml-auto mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
+          Objetos
+          </div>
+
+    </div>
     <hr  style={{border: "solid 1px white"}}/>
     
     <div className='pt-6' style={{display: "grid", gridTemplateColumns: "repeat(3,1fr)"}}>
