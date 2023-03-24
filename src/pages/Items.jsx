@@ -1,6 +1,7 @@
 import React,{useState,useContext} from 'react'
 import {BrowserRouter as Router, Link, Route, Routes, useNavigate} from 'react-router-dom';
 import {ChampionContext} from '../context/ChampionContext'
+
 import Modal from '../components/Modal'
 import { GiBloodySword,GiJungle,GiBorderedShield,GiBattleGear} from "react-icons/gi"
 
@@ -8,8 +9,8 @@ function Items() {
   const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.6.1/img/item/'
   const {champions, items, pjname, changepjname} = useContext(ChampionContext)
   const itemsValues = Object.values(items.data)
-  const [VisibilidadModal, setVisibilidadModal] = useState(false)
 
+  const [VisibilidadModal, setVisibilidadModal] = useState(false)
   const stats = [
     {stat: 'Daño', route:'/items/damage',icon: GiBloodySword}, 
     {stat: 'Resistencias', route:'/items/resistance',icon: GiBorderedShield}, 
