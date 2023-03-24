@@ -39,9 +39,9 @@ function Marksman() {
             backgroundColor: "rgb(9 20 40 / 0.9)",
           }}
         >
-          <div style={{fontSize: "3.5vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
-            TIRADORES
-          </div>
+          <div style={{fontSize: "2.8vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
+    Tiradores
+  </div>
           <hr style={{ border: "solid 1px white" }} />
 
           <div

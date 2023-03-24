@@ -39,7 +39,7 @@ function Home() {
               Grieta del Invocador
             </h1>
             <div>
-              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map11.png`} style={{width: "20vw"}} className ='rounded-xl cursor-pointer'></img>
+              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map11.png`} style={{width: "20vw"}} className ='rounded-xl'></img>
             </div>
 
           </div>
@@ -49,7 +49,7 @@ function Home() {
               Aram
             </h1>
             <div>
-              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map12.png`} style={{width: "20vw"}} className ='rounded-xl cursor-pointer'></img>
+              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map12.png`} style={{width: "20vw"}} className ='rounded-xl'></img>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ function Home() {
               Bosque Retorcido
             </h1>
             <div>
-              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map10.png`} style={{width: "20vw"}} className ='rounded-xl cursor-pointer'></img>
+              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map10.png`} style={{width: "20vw"}} className ='rounded-xl'></img>
             </div>
           </div>
 

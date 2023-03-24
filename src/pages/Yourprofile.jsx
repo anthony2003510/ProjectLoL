@@ -43,9 +43,9 @@ function Yourprofile() {
             backgroundColor: "rgb(9 20 40 / 0.9)",
           }}
         >
-            <div style={{fontSize: "3.5vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
-            BUSCAR INVOCADOR
-          </div>
+            <div style={{fontSize: "2.8vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
+    Buscar invocador
+  </div>
             <hr  style={{border: "solid 1px white"}}/>
 
             <div className="text-center w-full">
@@ -105,9 +105,9 @@ function Yourprofile() {
               </h2> 
             </div>
           ) : (
-            <div style={{fontSize: "2.5vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
-            Busca un jugador para poder mostrar su información
-          </div>
+            <div style={{fontSize: "2.8vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
+    Busca a un jugador para buscar su información
+  </div>
           )}
         </div>
       </div>
