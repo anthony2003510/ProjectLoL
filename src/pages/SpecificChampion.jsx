@@ -14,6 +14,7 @@ function SpecificChampion() {
 
   const [SpellDesc, setSpellDesc] = useState("")
   const [SpellTitle, setSpellTitle] = useState("")
+  const [pasiva, setpasiva] = useState("")
   //////////////////////////////////////
 
   async function getChamp()
@@ -32,7 +33,7 @@ function SpecificChampion() {
       ))
       Habilidades.push(data.spells[0].name),
       Habilidades.push(data.spells[0].description)
-      console.log(Habilidades)
+      setpasiva(data.passive.image.full)
     })
   },[])
 
@@ -101,10 +102,16 @@ function SpecificChampion() {
               
               <p style={{fontSize: "2vw"}} className="mb-2 font-bold tracking-tight text-[#f2f2f2] dark:text-[#f2f2f2] text-center">{SpellTitle == ""? Habilidades[0] : SpellTitle}</p>
               
-              <p style={{fontSize: "1.5vw"}} className="mb-3 text-[#f2f2f2] dark:text-[#f2f2f2]">{SpellDesc == ""? Habilidades[1] : SpellDesc}</p>   
-            </div>
+              <p style={{fontSize: "1.5vw"}} className="mb-3 text-[#f2f2f2] dark:text-[#f2f2f2]">{SpellDesc == ""? Habilidades[1] : SpellDesc}</p>
 
+            </div>
             <div className='flex flex-row space-x-10 items-center' style={{justifyContent: "center"}}>
+              {/* PASIVA */}
+            <div>
+              <img src={`http://ddragon.leagueoflegends.com/cdn/13.6.1/img/passive/${pasiva}`} style={{width: "4.5vw"}} className ='rounded-xl cursor-pointer skills' 
+                    onClick={() => setSpellAttributes(dataChamp.passive.name, dataChamp.passive.description)}/>
+            </div>
+            {/* ////PASIVA///// */}
               {
                 dataChamp.spells?.map((spell,i)=>(
                   <div key={i}  className=''>
