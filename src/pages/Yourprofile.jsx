@@ -28,7 +28,7 @@ function Yourprofile() {
       <div
         className="p-7 font-semibold overflow-scroll scrollbar-none h-screen w-screen"
         style={{
-          backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ryze_0.jpg)`,
+          backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_0.jpg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           // overflowY: "scroll",

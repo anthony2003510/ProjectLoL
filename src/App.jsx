@@ -5,6 +5,7 @@ import Champions from '../src/pages/Champions'
 import Items from '../src/pages/Items'
 import YourProfile from '../src/pages/Yourprofile'
 import Home from '../src/pages/Home'
+import Summoners from '../src/pages/Summoners'
 // ROLES
 import Assassin from '../src/pages/roles/Assassin'
 import Fighter from '../src/pages/roles/Fighter'
@@ -40,6 +41,7 @@ function App() {
           <Route path='/champions' exact element={<Champions />}/>
           <Route path='/items' exact element={<Items />}/>
           <Route path='/yourprofile' exact element={<YourProfile/>}/>
+          <Route path='/summoners' exact element={<Summoners/>}/>
 
           {/* RUTAS PARA LOS ROLES */}
           <Route path='/champions/Fighter' exact element={<Fighter />}/>

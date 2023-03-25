@@ -33,7 +33,7 @@ function Home() {
               Mapas
             </p>
             
-        <div className='' style={{display: "grid", gridTemplateColumns: "repeat(3,1fr)", padding:"1em 1em 1em 1em", gap: "1em", width: "100%"}}>
+        <div className='' style={{display: "grid", gridTemplateColumns: "repeat(2,1fr)", padding:"1em 1em 1em 1em", gap: "1em", width: "100%"}}>
           <div className='rounded-lg m-auto'>
             <h1 style={{fontSize: "2vw"}} className="mb-4 leading-none tracking-tight text-gray-900 lg: dark:text-white text-center pb-3">
               Grieta del Invocador
@@ -53,14 +53,7 @@ function Home() {
             </div>
           </div>
 
-          <div className='rounded-lg  m-auto'>
-            <h1 style={{fontSize: "2vw"}} className="mb-4 leading-none tracking-tight text-gray-900 lg: dark:text-white text-center pb-3">
-              Bosque Retorcido
-            </h1>
-            <div>
-              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map10.png`} style={{width: "20vw"}} className ='rounded-xl'></img>
-            </div>
-          </div>
+         
 
 
 
