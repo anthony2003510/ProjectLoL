@@ -68,7 +68,7 @@ function Assassin() {
         >
           <div className="grid grid-cols-3">
 
-<button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Mostrar Roles</button>
+<button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Roles</button>
 
 <div style={{fontSize: "2.8vw"}} className="mr-auto ml-auto mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
 Asesinos

@@ -33,7 +33,7 @@ function Items() {
 
     <div className="grid grid-cols-3">
 
-          <button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Mostrar Tipos</button>
+          <button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Tipos</button>
     
           <div style={{fontSize: "2.8vw"}} className="mr-auto ml-auto mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
           Objetos
@@ -48,23 +48,23 @@ function Items() {
         <>
         <div key={i}>
           {item.inStore !=false ?
-          (<p style={{height: "17vh"}} className="flex flex-row items-center bg-transparent gap-1 champs rounded-lg md:flex-row md:max-w-xl">
+          (<div style={{height: "17vh"}} className="flex flex-row items-center bg-transparent gap-1 champs rounded-lg md:flex-row md:max-w-xl">
           <img style={{width:"4.7vw"}} className="object-cover w-24 rounded-t-lg h-24 md:h-auto md:w-24 md:rounded-none md:rounded-l-lg" src={`${imagen}${item.image.full}`} alt=""/>
           <div className="flex flex-col justify-between p-4 leading-normal">
               <div className="font-bold tracking-tight text-gray-900 dark:text-white" style={{fontSize:"1.2vw"}}>{item.name}</div>
               <div className="overflow-scroll scrollbar-none  h-14 h-min-14 font-normal text-gray-700 dark:text-gray-400" style={{fontSize:"1vw"}}>{item.plaintext == "" ? "No tiene descripción" : item.plaintext}</div>
           </div>
-          </p>)
+          </div>)
 
           :
 
-          (<p style={{height: "17vh"}} className="flex flex-row items-center bg-transparent gap-1 champs rounded-lg md:flex-row md:max-w-xl">
+          (<div style={{height: "17vh"}} className="flex flex-row items-center bg-transparent gap-1 champs rounded-lg md:flex-row md:max-w-xl">
           <img style={{width:"4.7vw"}} className="object-cover w-24 rounded-t-lg h-24 md:h-auto md:w-24 md:rounded-none md:rounded-l-lg" src={`${imagen}${item.image.full}`} alt=""/>
           <div className="flex flex-col justify-between p-4 leading-normal">
               <div className="font-bold tracking-tight text-gray-900 dark:text-white" style={{fontSize:"1.2vw"}}>{item.name}</div>
               <div className="overflow-scroll scrollbar-none  h-14 h-min-14 font-normal text-gray-700 dark:text-gray-400" style={{fontSize:"1vw"}}>{item.plaintext == "" ? "No tiene descripción" : item.plaintext}</div>
           </div>
-          </p>)          
+          </div>)          
           }
         </div>
         </>     
@@ -84,9 +84,9 @@ function Items() {
           stats?.map((stat,i)=>(
               <Link to={stat?.route} key={i} className="group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md">
 
-              <div>{React.createElement(stat?.icon, {size: 20})}</div>
+              <div key={i}>{React.createElement(stat?.icon, {size: 20})}</div>
 
-              <h2 className="whitespace-pre duration-500">
+              <h2 key={i} className="whitespace-pre duration-500">
                   {stat?.stat}
               </h2>
 
@@ -99,16 +99,4 @@ function Items() {
    </>
   )
 }
-
 export default Items
-
-
-
-
-{/* <a href='#' key={i} className="flex flex-row items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-[#091428] dark:hover:bg-gray-800">
-          <img className="object-cover w-24 rounded-t-lg h-24 md:h-auto md:w-24 md:rounded-none md:rounded-l-lg" src={`${imagen}${item.image.full}`} alt=""/>
-          <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.name}</h5>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.plaintext}</p>
-          </div>
-          </a> */}

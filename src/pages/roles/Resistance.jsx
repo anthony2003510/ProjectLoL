@@ -37,7 +37,7 @@ function Resistance() {
     {/* <button>hola</button>  AQUI IRÍA EL TEMA DE PNER UN BOTON PARA QUE SALGA EL POPUP*/}
     <div className="grid grid-cols-3">
 
-<button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Mostrar Tipos</button>
+<button className="bg-[#091428] text-center grid-cols-1 hover:bg-[#0397AB] hover:text-black mb-4 text-white font-bold py-2 px-4 border border-[#C89B3C] rounded" style={{fontSize: "1.5vw", width: "12.3vw"}} onClick={()=>(setVisibilidadModal(true))}>Tipos</button>
 
 <div style={{fontSize: "2.8vw"}} className="mr-auto ml-auto mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
 Objetos defensivos
