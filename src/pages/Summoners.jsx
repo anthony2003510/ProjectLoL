@@ -43,10 +43,10 @@ function Summoners() {
                    summonsValues?.map((summoner,i)=>(
                     <div key={i}>
                         <div style={{height: "17vh"}} className="flex flex-row items-center bg-transparent gap-1 champs rounded-lg md:flex-row md:max-w-xl">
-                            <img style={{width:"4.7vw"}} className="object-cover w-24 rounded-t-lg h-24 md:h-auto md:w-24 md:rounded-none md:rounded-l-lg" src={`http://ddragon.leagueoflegends.com/cdn/13.6.1/img/spell/${summoner.image.full}`} alt=""/>
+                            <img style={{width:"4.5vw"}} className="object-cover w-24 rounded-t-lg h-24 md:h-auto md:w-24 md:rounded-none md:rounded-l-lg" src={`http://ddragon.leagueoflegends.com/cdn/13.6.1/img/spell/${summoner.image.full}`} alt=""/>
                             <div className="flex flex-col justify-between p-4 leading-normal">
-                                <div className="font-bold tracking-tight text-gray-900 dark:text-white" style={{fontSize:"1.2vw"}}>{summoner.name}</div>
-                                <div className="overflow-scroll scrollbar-none  h-14 h-min-14 font-normal text-gray-700 dark:text-gray-400" style={{fontSize:"1vw"}}>{summoner.description == "" ? "No tiene descripción" : summoner.description}</div>
+                                <div className="font-bold tracking-tight text-gray-900 dark:text-white" style={{fontSize:"1vw"}}>{summoner.name}</div>
+                                <div className="overflow-scroll scrollbar-none  h-14 h-min-14 font-normal text-gray-700 dark:text-gray-400" style={{fontSize:"0.8vw"}}>{summoner.description == "" ? "No tiene descripción" : summoner.description}</div>
                             </div>
                         </div>
                     </div>
