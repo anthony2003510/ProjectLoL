@@ -11,7 +11,7 @@ function Home() {
 
        <div className="py-4">
           <h1 style={{fontSize: "4vw"}} className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 lg: dark:text-white text-center">
-            ¡Seann bienvenidos a:
+            ¡Sean bienvenidos a:
           </h1>
           <p className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center"
           style={{fontSize: "3vw"}}>
