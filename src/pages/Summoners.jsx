@@ -11,7 +11,7 @@ function Summoners() {
     console.log(summonsValues)
     async function getSummoners()
     {
-        const summon = await axios.get(`http://ddragon.leagueoflegends.com/cdn/13.6.1/data/es_ES/summoner.json`)
+        const summon = await axios.get(`http://ddragon.leagueoflegends.com/cdn/13.7.1/data/es_ES/summoner.json`)
         return summon.data.data
     }
 

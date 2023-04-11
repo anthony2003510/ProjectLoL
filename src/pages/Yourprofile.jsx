@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 function Yourprofile() {
-  const API_KEY = "RGAPI-3d623194-3393-43b3-a6f5-6c6dfcacde81";
+  const API_KEY = "RGAPI-66b133ff-1126-402d-b681-6d9b8f4fec33";
   const [playerSearch, setplayerSearch] = useState("");
   const [summonerData, setsummonerData] = useState({});
 
@@ -104,7 +104,7 @@ function Yourprofile() {
               <img
                 style={{ width: "22.5vw", height: "45vh" }}
                 className=" ml-auto mr-auto md:h-auto p-5"
-                src={`http://ddragon.leagueoflegends.com/cdn/13.6.1/img/profileicon/${summonerData.profileIconId}.png`}
+                src={`http://ddragon.leagueoflegends.com/cdn/13.7.1/img/profileicon/${summonerData.profileIconId}.png`}
                 alt=""
               />
               <h2

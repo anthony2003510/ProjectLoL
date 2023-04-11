@@ -4,7 +4,7 @@ import {ChampionContext} from '../../context/ChampionContext'
 import Modal from '../../components/Modal'
 import { GiBloodySword,GiJungle,GiBorderedShield,GiBattleGear} from "react-icons/gi"
 function Resistance() {
-  const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.6.1/img/item/'
+  const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.7.1/img/item/'
   const {champions, items, pjname, changepjname} = useContext(ChampionContext)
   const itemsValues = Object.values(items.data)
   const [VisibilidadModal, setVisibilidadModal] = useState(false)

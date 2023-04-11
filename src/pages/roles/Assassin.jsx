@@ -12,7 +12,7 @@ import {
 } from "react-icons/gi";
 import Modal from "../../components/Modal";
 function Assassin() {
-  const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/'
+  const imagen = 'http://ddragon.leagueoflegends.com/cdn/13.7.1/img/champion/'
   const {champions, items, ChampionName,setChampionName} = useContext(ChampionContext)
   const championsPjs = Object.values(champions.data)
 

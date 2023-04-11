@@ -28,15 +28,16 @@ function Sidebar() {
             icon:  HiBeaker
         },
         {
-            name: "Buscar Invocador",
-            link: "/yourprofile",
-            icon:  HiUsers
-        },
-        {
             name: "Hechizos de invocador",
             link: "/summoners",
             icon:  GiFireSpellCast
+        },
+        {
+            name: "Buscar Invocador",
+            link: "/yourprofile",
+            icon:  HiUsers
         }
+        
     ];
     const [open, setOpen] = useState(true);
     return (
