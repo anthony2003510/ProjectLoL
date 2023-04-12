@@ -32,12 +32,43 @@ function SpecificChampion() {
         Skins.push(skin.num)
       ))
       Habilidades.push(data.spells[0].name),
-      Habilidades.push(data.spells[0].description)
+      Habilidades.push(victorString(data.spells[0].description))
       setpasiva(data.passive.image.full)
     })
   },[])
 
   const [CurrentIndex, setCurrentIndex] = useState(0)
+
+
+
+  const victorString = (stringDesc) =>
+  {
+    var newStr = ""
+    var i = 0
+    stringDesc = stringDesc.split("")
+    console.log(stringDesc)
+    while(i<stringDesc.length)
+    {
+      var j=i
+      if(stringDesc[i] == "<")
+      { 
+        while(j<stringDesc.length)
+        {
+          if(stringDesc[j] == ">")
+          {
+            j = stringDesc.length
+          }
+          i = i+1
+          j = j+1
+        }
+      }
+      newStr = newStr + stringDesc[i]
+      i = i+1
+    }
+    return newStr
+  }
+
+
 
   const prevSlide = () => 
   {
@@ -60,7 +91,7 @@ function SpecificChampion() {
   const setSpellAttributes = (title,desc) =>
   {
     setSpellTitle(title)
-    setSpellDesc(desc)
+    setSpellDesc(victorString(desc))
   }
   return ( 
     <>
@@ -100,9 +131,9 @@ function SpecificChampion() {
             
             <div className="p-6 rounded-lg content-center scrollbar">
               
-              <p style={{fontSize: "2vw"}} className="mb-2 font-bold tracking-tight text-[#f2f2f2] dark:text-[#f2f2f2] text-center">{SpellTitle == ""? Habilidades[0] : SpellTitle}</p>
+              <p style={{fontSize: "2vw"}} className="mb-2 font-bold tracking-tight text-[#f2f2f2] dark:text-[#f2f2f2] text-center">{SpellTitle == ""? Habilidades[0] : victorString(SpellTitle)}</p>
               
-              <p style={{fontSize: "1.5vw", height: "22vh",overflowY: "scroll"}} className="mb-3 scrollbar text-[#f2f2f2] dark:text-[#f2f2f2]">{SpellDesc == ""? Habilidades[1] : SpellDesc}</p>
+              <p style={{fontSize: "1.5vw", height: "22vh",overflowY: "scroll"}} className="mb-3 scrollbar text-[#f2f2f2] dark:text-[#f2f2f2]">{SpellDesc == ""? Habilidades[1] : victorString(SpellDesc)}</p>
 
             </div>
             <div className='flex flex-row space-x-10 items-center' style={{justifyContent: "center"}}>
