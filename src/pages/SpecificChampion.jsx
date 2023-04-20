@@ -19,6 +19,7 @@ function SpecificChampion() {
 
   async function getChamp()
   {
+    console.log(ChampionName);
     const champ = await axios.get(`http://ddragon.leagueoflegends.com/cdn/13.7.1/data/es_ES/champion/${ChampionName}.json`)
     return champ.data.data[ChampionName]
   }

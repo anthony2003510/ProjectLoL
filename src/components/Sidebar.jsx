@@ -2,7 +2,8 @@ import {BiMenuAltRight} from "react-icons/bi";
 import React,{ useState }  from 'react'
 import {BrowserRouter as Router, Link, Route, Routes, useNavigate} from 'react-router-dom';
 import { HiLightningBolt, HiUsers, HiBeaker, } from "react-icons/hi";
-import { GiFireSpellCast } from "react-icons/gi";
+import { GiFireSpellCast,GiBrutalHelm,GiSwapBag } from "react-icons/gi";
+import { BsFillChatLeftDotsFill } from "react-icons/bs";
 
 import { AiFillHome } from "react-icons/ai";
 function Sidebar() {
@@ -20,12 +21,12 @@ function Sidebar() {
         {
            name: "Campeones",
            link: "/champions",
-           icon:  HiLightningBolt
+           icon:  GiBrutalHelm
         },
         {
             name: "Objetos",
             link: "/items",
-            icon:  HiBeaker
+            icon:  GiSwapBag
         },
         {
             name: "Hechizos de invocador",
@@ -36,6 +37,11 @@ function Sidebar() {
             name: "Buscar Invocador",
             link: "/yourprofile",
             icon:  HiUsers
+        },
+        {
+            name: "Chat",
+            link: "/chat",
+            icon:  BsFillChatLeftDotsFill
         }
         
     ];
