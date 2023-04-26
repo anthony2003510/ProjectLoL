@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 function Yourprofile() {
-  const API_KEY = "RGAPI-66b133ff-1126-402d-b681-6d9b8f4fec33";
+  const API_KEY = `${import.meta.env.VITE_APIKEY}`;
+  console.log(API_KEY);
   const [playerSearch, setplayerSearch] = useState("");
   const [summonerData, setsummonerData] = useState({});
 
