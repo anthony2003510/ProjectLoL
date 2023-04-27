@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 function Home() {
   return (
     <div className='h-screen w-screen px-5 py-5 scrollbar scrollbar-none' 
@@ -33,8 +34,8 @@ function Home() {
               Mapas
             </p>
             
-        <div className='' style={{display: "grid", gridTemplateColumns: "repeat(3,1fr)", padding:"1em 1em 1em 1em", gap: "1em", width: "100%"}}>
-          <div className='rounded-lg m-auto'>
+        <div className='' style={{display: "grid", gridTemplateColumns: "repeat(2,1fr)", padding:"1em 1em 1em 1em", gap: "1em", width: "100%"}}>
+          <Link to="https://www.youtube.com/watch?v=MBjbKT839mU" target="_blank" className='rounded-lg m-auto'>
             <h1 style={{fontSize: "2vw"}} className="mb-4 leading-none tracking-tight text-gray-900 lg: dark:text-white text-center pb-3">
               Grieta del Invocador
             </h1>
@@ -42,29 +43,16 @@ function Home() {
               <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map11.png`} style={{width: "20vw"}} className ='rounded-xl'></img>
             </div>
 
-          </div>
+          </Link>
 
-          <div className='rounded-lg m-auto'>
+          <Link to="https://www.youtube.com/watch?v=QeMXHrTH7NE" target="_blank" className='rounded-lg m-auto'>
             <h1 style={{fontSize: "2vw"}} className="mb-4 leading-none tracking-tight text-gray-900 lg: dark:text-white text-center pb-3">
               Aram
             </h1>
             <div>
               <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map12.png`} style={{width: "20vw"}} className ='rounded-xl'></img>
             </div>
-          </div>
-
-
-          <div className='rounded-lg m-auto'>
-            <h1 style={{fontSize: "2vw"}} className="mb-4 leading-none tracking-tight text-gray-900 lg: dark:text-white text-center pb-3">
-              Bosque Retorcido
-            </h1>
-            <div>
-              <img src={`http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map10.png`} style={{width: "20vw"}} className ='rounded-xl'></img>
-            </div>
-          </div>
-         
-
-
+          </Link>
 
         </div>
 
